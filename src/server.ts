@@ -1,13 +1,7 @@
 import dotenv from 'dotenv'
+import 'reflect-metadata'
 dotenv.config()
-import 'module-alias/register'
 
-import { app } from './app'
-import http from 'http'
-import { config } from '@config/index'
-
-const PORT = config.get('port')
-
-const server = http.createServer(app)
-
-server.listen(PORT)
+import { Server } from '@app'
+const server = new Server()
+server.start()

@@ -1,0 +1,3 @@
+class AuthMiddleware {}
+
+export { AuthMiddleware }

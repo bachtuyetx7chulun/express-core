@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
     "target": "ES6",
     "module": "commonjs",
-    "rootDir": "./",
+    "rootDir": "src",
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@config/*": ["src/config/*"]
+      "@app": ["src/app"],
+      "@commons/*": ["src/commons/*"],
+      "@config/*": ["src/config/*"],
+      "@constant/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"],
+      "@components/*": ["src/components/*"]
     },
     "allowJs": true,
     "checkJs": true,
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "dist/",
     "inlineSourceMap": true,
     "inlineSources": true,
     "newLine": "lf",
@@ -30,8 +36,8 @@
     "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "skipLibCheck": true
+    "noImplicitReturns": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
 }

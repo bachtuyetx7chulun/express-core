@@ -16,6 +16,7 @@
   "plugins": [],
   "rules": {
     "no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": [
       "error",
       {
